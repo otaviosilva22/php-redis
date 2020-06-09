@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    background-color: #0B2161;
+}
+
+div#interface{
+    width: 1350px;
+}
+
+header#cabecalho{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.9);
+    margin: 0 auto;
+}
+
+header#cabecalho h1{
+    font-family: 'arial black', sans-serif;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    top:18px;
+    left: 20px;
+    font-size: 18px;    
+}
+
+header#cabecalho nav#menu_principal{
+    display:block;
+    font-weight:bold;
+    font-family: 'arial black', sans-serif;
+    font-size: 13px;
+    color: white;
+    position: relative;
+}
+
+header#cabecalho nav#menu_principal ol{
+    position: absolute;
+    list-style: none;
+    text-transform: uppercase;
+    top: 15px;
+    left:42%;    
+}
+
+/*formatacao do li*/
+header#cabecalho nav#menu_principal li{
+    display:inline-block;
+    padding:7px;
+    margin:0px;
+}
+
+header#cabecalho nav#menu_principal a{
+    color:white;
+    text-decoration: none;
+}
+
+section#geral{
+    position: absolute;
+    top: 15%;
+    width: 90%;
+    color: white;
+    height: 40px;
+    left: 5%;
+}
+
+section#geral table{
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    font-family: arial black, sans-serif;
+    color: white;
+    position: relative;
+    
+}
+
+section#geral table td{
+    width: 100px;
+}
+
+
+section#titulo{
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    margin: 0 auto;
+}
+
+section#titulo h2{
+    font-size: 15px;
+    font-family: arial black, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+section#titulo input{
+    border-radius: 10px;
+    height: 25px;
+}
+
+section#dados{
+    position: absolute;
+    background-color: #0B2161;
+    height: 350px;
+    width: 95%;
+    top:40%;
+    left: 2.5%;
+    overflow: auto;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px black;
+    margin: 0 auto;
+}
+
+section#dados table#casosMG{
+    position: relative;
+    background-color: #0A1B2A;
+    color: white;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    /*
+    border-spacing: 10px; 
+    border-collapse: separate;
+    */
+    
+}
+
+
+section#dados table#casosMG tr.titulo{
+    text-align: center;
+    height: 30px;
+    color: white;
+    font-size: 8px;
+    background-color: #084B8A;
+    border: none;
+}
+
+
+section#dados table#casosMG tr.conteudo{
+    text-align: center;
+    height: 30px;
+    font-weight: bold;
+    font-size: 8px;
+}
+
+section#dados table#casosMG td{
+    /*padding: 10px;*/
+    width: 200px;
+       
+}
+
+footer{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    top: 100%;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer p{
+    position: relative;
+    top: 5px;
+    color: white;   
+    font-size: 14px;
+}
