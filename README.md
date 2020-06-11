@@ -9,5 +9,5 @@ Descrição dos arquivos:
 
 ->  processamento/processamento.php (Coleta de dados do JSON e armazenamento no Redis)
 
-->  estilo/... (Estilização da página em CSS para diferentes tamanhos de monitores)
+->  estilo/... (Arquivos de estilização CSS)
 
