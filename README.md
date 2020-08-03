@@ -1,5 +1,8 @@
-# redis_bdII
-Os arquivos aqui contidos, fazem referência ao trabalho sobre Redis da disciplina de Banco de Dados II do curso de Bacharelado em Ciência da Computação do IFSULDEMINAS - Campus Passos. 
+# php-redis
+
+Estes arquivos fazem referência á um trabalho sobre a implementação do banco de dados Redis na linguagem de programação PHP. O front-end não possui foco principal, e por isso as páginas não apresentam conteúdo responsivo.
+
+Os dados armazenados no Redis representam números do COVID-19 no estado de Minas Gerais, e são captados atráves de um Json disponibilizado pelo site brasil.io.
 
 Descrição dos arquivos:
 
@@ -7,5 +10,5 @@ Descrição dos arquivos:
 
 ->  processamento/processamento.php (Coleta de dados do JSON e armazenamento no Redis)
 
-->  estilo/... (Arquivos de estilização CSS)
+->  estilo/estilo.css (Arquivo de estilização CSS)
 
