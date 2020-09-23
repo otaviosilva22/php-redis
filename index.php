@@ -61,7 +61,7 @@
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 1350px)" href="estilo/grande.css"/>
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 1350px)" href="estilo/estilo.css"/>
         <title>COVID-19 MG</title>
         <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
 		
