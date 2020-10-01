@@ -4,11 +4,13 @@ Estes arquivos fazem referência à um trabalho sobre a implementação do banco
 
 Os dados armazenados no Redis representam números do COVID-19 no estado de Minas Gerais, e são captados atráves de um Json disponibilizado pelo site brasil.io.
 
-Descrição dos arquivos:
+<h2>Descrição dos arquivos:</h2>
 
-->  index.php (Página inicial em PHP com exibição dos dados)
+<ul>
+  <li>index.php (Página inicial em PHP com exibição dos dados); </li>
+  <li>processamento/processamento.php (Coleta de dados do JSON e armazenamento no Redis); </li>
+  <li>estilo/estilo.css (Arquivo de estilização CSS).</li>  
+<ul>
+  
 
-->  processamento/processamento.php (Coleta de dados do JSON e armazenamento no Redis)
-
-->  estilo/estilo.css (Arquivo de estilização CSS)
 
