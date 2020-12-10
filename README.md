@@ -10,7 +10,13 @@ Os dados armazenados no Redis representam números do COVID-19 no estado de Mina
   <li>index.php (Página inicial em PHP com exibição dos dados); </li>
   <li>processamento/processamento.php (Coleta de dados do JSON e armazenamento no Redis); </li>
   <li>estilo/estilo.css (Arquivo de estilização CSS).</li>  
-<ul>
+</ul>
+  
+  
+<h2> Página </h2>
+
+<img src="img_pagina.png">
+
   
 
 
