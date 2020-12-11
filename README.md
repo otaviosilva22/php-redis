@@ -1,4 +1,4 @@
-# php-redis
+# Aplicação do banco de dados Redis com o PHP
 
 Estes arquivos fazem referência à um trabalho sobre a implementação do banco de dados Redis na linguagem de programação PHP. O front-end não possui foco principal e por isso as páginas não apresentam o conteúdo de forma responsiva.
 
