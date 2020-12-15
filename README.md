@@ -14,7 +14,7 @@ Os dados armazenados no Redis representam números do COVID-19 no estado de Mina
 
 <h2> Limpeza dos Dados </h2>
 
-Foi necessário criar um banco no MySQL para executar o SQL necessário para limpeza dos dados.
+O arquivo .csv completo contendo dados da covid-19 em todo o Brasil pode ser baixado atraés da página <a href="https://brasil.io/dataset/covid19/caso_full/">Brasil.io</a>. Contudo, como o trabalho faz referência à somente a Minas Gerais, foi necessário criar um banco no MySQL para executar o SQL necessário para limpeza dos dados.
 ```
 CREATE DATABASE covidmg;
 USE covidmg;
@@ -29,7 +29,7 @@ CREATE TABLE caso_full(
 );
 ```
 
-Após isso, foi codificado um script em PHP para inserção de dados no banco <b>covidmg</b>.
+Após isso, foi codificado um script em PHP para inserção dos dados de Minas Gerais no banco <b>covidmg</b>.
 ```
 <?php
 
@@ -101,7 +101,6 @@ Em sequencia exporta-se a consulta referente a <b>caso_full</b>;
 SELECT * from caso_full;
 
 ```
-
 
 <h2> Conexão Redis </h2>
 
