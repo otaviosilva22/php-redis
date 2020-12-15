@@ -14,7 +14,7 @@ Os dados armazenados no Redis representam números do COVID-19 no estado de Mina
 
 <h2> Limpeza dos Dados </h2>
 
-O arquivo .csv completo contendo dados da covid-19 em todo o Brasil pode ser baixado atraés da página <a href="https://brasil.io/dataset/covid19/caso_full/">Brasil.io</a>. Contudo, como o trabalho faz referência à somente a Minas Gerais, é necessário criar um banco no MySQL para executar o SQL necessário para limpeza dos dados.
+O arquivo .csv completo contendo dados da covid-19 em todo o Brasil pode ser baixado diretamente na página <a href="https://brasil.io/dataset/covid19/caso_full/">Brasil.io</a>. Contudo, como o trabalho faz referência à somente a Minas Gerais, é necessário criar um banco no MySQL para realizar a limpeza dos dados.
 ```
 CREATE DATABASE covidmg;
 USE covidmg;
@@ -28,7 +28,6 @@ CREATE TABLE caso_full(
     last_date VARCHAR (45)
 );
 ```
-
 Após isso, codifica-se um script em PHP (ou na linguagem de preferência) para inserção dos dados de Minas Gerais no banco <b>covidmg</b>.
 ```
 <?php
@@ -95,22 +94,26 @@ Após isso, codifica-se um script em PHP (ou na linguagem de preferência) para 
 ?>
 
 ```
-Em sequencia, exporta-se a consulta referente a <b>caso_full</b>; 
+Em sequencia, exporta-se a consulta SQL referente a <b>caso_full</b>. 
 
 ```
 SELECT * from caso_full;
 
 ```
 
-<h2> Conexão Redis </h2>
+<h2> Conexão Redis em PHP </h2>
 
 ```
-$host = 'localhost';
-$port = 6379;
-$redis = new Redis();
-if ($redis->connect($host, $port) == false){
-    die($redis->getLastError());
-}
+<?php
+	$host = 'localhost';
+	$port = 6379;
+	$redis = new Redis();
+	if ($redis->connect($host, $port) == false){
+	    die($redis->getLastError());
+	}
+	
+	//as funções podem ser verificadas no arquivo <i>processamento.php</i>.
+?>
 ```
 
 <h2> Página </h2>
