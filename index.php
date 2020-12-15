@@ -1,61 +1,16 @@
-<?php //incluindo processameto do json
-    //conexão com redis
+<?php
     
-    $host = 'localhost';
-    $port = 6379;
-    $redis = new Redis();
-    if ($redis->connect($host, $port) == false){
-        die($redis->getLastError());
-    }
-
-    $hoje = date('d/m/Y');
-
     //realiza o processamento do json apenas uma vez no dia
-    if (strcmp($hoje, $redis->get('ultimadata')) != 0 || $redis->exists('ultimadata') == 0){
-        include 'processamento/processamento.php';
-        echo  "<script>alert('Dados atualizados com sucesso!');</script>";
-    }
-
-
-    function exibicao($pesquisar){
-        //abre conexao na funcao
-        $host = 'localhost';
-        $port = 6379;
-        $redis = new Redis();
-        if ($redis->connect($host, $port) == false){
-            die($redis->getLastError());
-        }
-
-        $i=0;
-        if (strcmp($pesquisar, "") == 0){
-
-            while ($i<$redis->get('count')){
-                echo '<tr class="conteudo"><td>'.$redis->hget($i, 'city').'</td>'; //nome cidade
-                echo '<td><font color="green">'.$redis->hget($i, 'population').'</font></td>'; //populacao
-                echo '<td><font color="orange">'.$redis->hget($i, 'confirmed').'</font></td>'; //casos confirmados
-                echo '<td><font color="red">'.$redis->hget($i, 'deaths').'</font></td>'; //mortes confirmadas
-                echo '<td><font color="red">'.$redis->hget($i, 'death_rate').'</font></td>'; //taxa mortalidade
-                echo '<td><font color="yellow">'.$redis->hget($i, 'date').'</font></td>'; //data da atualização     
-                $i++;            
-            }
-        
-        }else{
-            
-            $i = $redis->get($pesquisar);            
-            echo '<tr class="conteudo"><td>'.$redis->hget($i, 'city').'</td>'; //nome cidade
-            echo '<td><font color="green">'.$redis->hget($i, 'population').'</font></td>'; //populacao
-            echo '<td><font color="orange">'.$redis->hget($i, 'confirmed').'</font></td>'; //casos confirmados
-            echo '<td><font color="red">'.$redis->hget($i, 'deaths').'</font></td>'; //mortes confirmadas
-            echo '<td><font color="red">'.$redis->hget($i, 'death_rate').'</font></td>'; //taxa mortalidade
-            echo '<td><font color="yellow">'.$redis->hget($i, 'date').'</font></td>'; //data da atualização     
-            
-        }
-
-          
-    }                
-                  
-
-
+    include 'processamento/processamento.php';
+	
+	saveRedis();
+	
+	$host = 'localhost';
+	$port = 6379;
+	$redis = new Redis();
+	if ($redis->connect($host, $port) == false){
+		die($redis->getLastError());
+	}
 
 ?>
 
