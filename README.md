@@ -115,7 +115,7 @@ if ($redis->connect($host, $port) == false){
 
 <h2> Página </h2>
 
-
+<img src="estilo/img-pagina.png">
   
 
 
