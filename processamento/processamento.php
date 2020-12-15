@@ -1,4 +1,3 @@
-
 <?php
     
 	
@@ -16,6 +15,7 @@
 		//capturando dados do arquivo .csv
 
 		$delimitador = ',';
+		$cerca = '"';
 
 		// Abrir arquivo para leitura
 		$f = fopen('processamento/caso_full.csv', 'r');
@@ -30,14 +30,14 @@
 		if ($f) { 
 
 			// Ler cabecalho do arquivo
-			$cabecalho = fgetcsv($f, 0, $delimitador);
+			$cabecalho = fgetcsv($f, 0, $delimitador, $cerca);
 			
 		
 			// Enquanto nao terminar o arquivo
 			while (!feof($f)) { 
 
 				// Ler uma linha do arquivo
-				$linha = fgetcsv($f, 0, $delimitador);
+				$linha = fgetcsv($f, 0, $delimitador, $cerca);
 				if (!$linha) {
 					continue;
 				}
@@ -46,32 +46,31 @@
 				$registro = array_combine($cabecalho, $linha);
 
 				// Obtendo dados para armazenamento no Redis
+			
 				
-				if (strcmp($registro['state'],"MG") == 0 && strcmp($registro['date'],$dataEscolhida) == 0){
-					
-					$redis->set($registro['city'], $count); //utilizado na pesquisa
-					
-					
-					$redis->set('count', $count); //armazena contador na key 'count'
-					
-					$pgeral += $registro['estimated_population_2019'];
-					$mortes += $registro['last_available_deaths'];
-					$casos += $registro['last_available_confirmed'];
-					
-					$redis->hmset($count, 
-					[
-						'city' => $registro['city'],
-						'population' => $registro['estimated_population_2019'],
-						'confirmed' => $registro['last_available_confirmed'],
-						'deaths' => $registro['last_available_deaths'],
-						'death_rate' =>  $registro['last_available_death_rate'],
-						'date' => $registro['date'],
-					]);
-					
-					$count = $count + 1; //contador de cidades
-					
-					
-				}
+				$redis->set($registro['city'], $count); //utilizado na pesquisa
+				
+				
+				$redis->set('count', $count); //armazena contador na key 'count'
+				
+				$pgeral += $registro['population'];
+				$mortes += $registro['deaths'];
+				$casos += $registro['confirmed'];
+				
+				$redis->hmset($count, 
+				[
+					'city' => $registro['city'],
+					'population' => $registro['population'],
+					'confirmed' => $registro['confirmed'],
+					'deaths' => $registro['deaths'],
+					'death_rate' =>  $registro['death_rate'],
+					'date' => $registro['last_date'],
+				]);
+				
+				$count = $count + 1; //contador de cidades
+				
+				
+			
 			}
 			fclose($f);
 		}
