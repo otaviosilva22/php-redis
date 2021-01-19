@@ -14,7 +14,7 @@ Os dados armazenados no Redis representam números do COVID-19 no estado de Mina
 
 <h2> Limpeza dos Dados </h2>
 
-O arquivo .csv completo contendo dados da covid-19 em todo o Brasil pode ser baixado diretamente na página <a href="https://brasil.io/dataset/covid19/caso_full/">Brasil.io</a>. Contudo, como o trabalho faz referência à somente a Minas Gerais, é necessário criar um banco no MySQL para realizar a limpeza dos dados.
+O arquivo .csv completo contendo dados da covid-19 em todo o Brasil pode ser baixado diretamente na página <a href="https://brasil.io/dataset/covid19/caso_full/">Brasil.io</a>. Contudo, como o trabalho faz referência à somente a Minas Gerais, é necessário realizar a limpeza dos dados, e para isso optou-se por utilizar o banco MySQL como ferramenta de auxílio.
 ```
 CREATE DATABASE covidmg;
 USE covidmg;
