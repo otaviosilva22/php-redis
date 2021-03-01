@@ -101,6 +101,13 @@ SELECT * from caso_full;
 
 ```
 
+<h2> Configuração do Redis </h2>
+
+Para utilização do Redis com PHP é necessário antes realizar alguns passos de configuração, seja no Windows ou Linux. Para isso, recomenda-se a leitura dos seguintes arquivos:
+
+- [Sessões do PHP com Redis](https://imasters.com.br/back-end/sessoes-php-com-redis)
+- [Utilizando Redis com a extensão PHPRedis em sua aplicação PHP](https://medium.com/@brenodouglas/utilizando-redis-com-a-extens%C3%A3o-phpredis-em-sua-aplica%C3%A7%C3%A3o-php-e81d4e2762fd)
+
 <h2> Conexão Redis em PHP </h2>
 
 ```
