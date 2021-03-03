@@ -2,7 +2,7 @@
 
 Estes arquivos fazem referência à um trabalho sobre a implementação do banco de dados Redis na linguagem de programação PHP. O front-end não possui foco principal e por isso as páginas não apresentam o conteúdo de forma responsiva.
 
-Os dados armazenados no Redis representam números do COVID-19 no estado de Minas Gerais, e são captados atráves de um arquivo .csv disponibilizado pelo site brasil.io.
+Os dados armazenados no Redis representam números do COVID-19 em Minas Gerais, e são captados atráves de um arquivo .csv disponibilizado pelo site brasil.io.
 
 <h2> Tecnologias Utilizadas </h2>
 
@@ -14,7 +14,8 @@ Os dados armazenados no Redis representam números do COVID-19 no estado de Mina
 
 <h2> Limpeza dos Dados </h2>
 
-O arquivo .csv completo contendo dados da covid-19 em todo o Brasil pode ser baixado diretamente na página <a href="https://brasil.io/dataset/covid19/caso_full/">Brasil.io</a>. Contudo, como o trabalho faz referência à somente a Minas Gerais, é necessário realizar a limpeza dos dados, e para isso optou-se por utilizar o banco MySQL como ferramenta de auxílio.
+O arquivo .csv completo contendo dados da covid-19 em todo o Brasil pode ser baixado diretamente na página <a href="https://brasil.io/dataset/covid19/caso_full/">Brasil.io</a>. Contudo, como o trabalho faz referência somente ao estado de Minas Gerais, é necessário realizar a limpeza dos dados. Para isso optou-se por utilizar o banco MySQL como ferramenta de auxílio.
+
 ```
 CREATE DATABASE covidmg;
 USE covidmg;
@@ -103,10 +104,10 @@ SELECT * from caso_full;
 
 <h2> Configuração do Redis </h2>
 
-Para utilização do Redis com PHP é necessário antes realizar alguns passos de configuração, seja no Windows ou Linux. Para isso, recomenda-se a leitura dos seguintes arquivos:
+Para utilização do Redis com PHP é necessário realizar alguns passos de configuração, seja no Windows ou Linux. Para isso, recomenda-se a leitura dos seguintes artigos:
 
-- [Sessões do PHP com Redis](https://imasters.com.br/back-end/sessoes-php-com-redis)
-- [Utilizando Redis com a extensão PHPRedis em sua aplicação PHP](https://medium.com/@brenodouglas/utilizando-redis-com-a-extens%C3%A3o-phpredis-em-sua-aplica%C3%A7%C3%A3o-php-e81d4e2762fd)
+- [Sessões do PHP com Redis;](https://imasters.com.br/back-end/sessoes-php-com-redis)
+- [Utilizando Redis com a extensão PHPRedis em sua aplicação PHP.](https://medium.com/@brenodouglas/utilizando-redis-com-a-extens%C3%A3o-phpredis-em-sua-aplica%C3%A7%C3%A3o-php-e81d4e2762fd)
 
 <h2> Conexão Redis em PHP </h2>
 
