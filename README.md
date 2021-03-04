@@ -4,7 +4,7 @@ Estes arquivos fazem referência à um trabalho sobre a implementação do banco
 
 Os dados armazenados no Redis representam números do COVID-19 em Minas Gerais, e são captados atráves de um arquivo .csv disponibilizado pelo site brasil.io.
 
-<h2> Tecnologias Utilizadas </h2>
+<h2> Tecnologias utilizadas </h2>
 
 - [Redis](https://redis.io/)
 - [MySQL](https://www.mysql.com/)
@@ -12,7 +12,7 @@ Os dados armazenados no Redis representam números do COVID-19 em Minas Gerais, 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://devdocs.io/css/)
 
-<h2> Limpeza dos Dados </h2>
+<h2> Limpeza dos dados </h2>
 
 O arquivo .csv completo contendo dados da covid-19 em todo o Brasil pode ser baixado diretamente na página <a href="https://brasil.io/dataset/covid19/caso_full/">Brasil.io</a>. Contudo, como o trabalho faz referência somente ao estado de Minas Gerais, é necessário realizar a limpeza dos dados. Para isso optou-se por utilizar o banco MySQL como ferramenta de auxílio.
 
